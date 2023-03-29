@@ -1,0 +1,4 @@
+rm -f trace_core_00000000.log
+rm -f ibex_simple_system.log
+rm -f ibex_simple_system_pcount.csv
+

@@ -1,0 +1,13 @@
+#!/bin/tcsh
+
+set files = `cat sv_list`
+set sub = "./origin/"
+
+foreach file ($files)
+    if ( `echo $file | grep -c $sub` ) then
+        # do nothing
+    else
+        python ibex_add_fwrite.py -r $file
+        echo "[Modified]: $file"
+    endif
+end

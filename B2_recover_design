@@ -1,0 +1,13 @@
+#!/bin/tcsh
+
+cd origin
+unalias cp
+
+set files = `find . -name "*.sv"`
+
+foreach file ($files)
+    cp -f $file "../$file"
+end
+
+alias cp
+

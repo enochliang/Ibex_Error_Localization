@@ -1,0 +1,6 @@
+mkdir origin
+find . -name "*.sv" |xargs tar czf origin.tgz
+tar zxvf origin.tgz -C origin
+rm origin.tgz
+chmod -R 544 origin
+
